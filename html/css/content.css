@@ -1,0 +1,44 @@
+.content{
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.section-content{
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content:space-between;
+    margin: 0 auto;
+}
+
+.h1-text{
+    width: 40%;
+    height: auto;
+    margin-top: 5%;
+    margin-left: 2rem;
+}
+
+.h1-text> h1{
+    font-size: 50px;
+    color: rgb(53, 54, 54);
+    font-weight: bold;
+}
+
+.img-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: auto;
+    padding-left: 5%;
+    margin-top: 135px;
+
+}
+
+.img-section > img{
+    width: 85%;
+    
+}
+
+
