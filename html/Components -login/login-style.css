@@ -1,0 +1,160 @@
+.content{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.left-login > h1{
+
+    color:rgb(53, 54, 54);
+    font-size: 3vw;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#left-login-img{
+    width: 35vw;
+}
+
+.right-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.card-login{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background-color: #fff;
+    border:  1px solid #00000090;;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px #00000090;
+}
+
+.card-login > h2{
+    color: #070707;
+    font-weight: 700;
+    font-size: 26px;
+    margin: 0;
+    margin-bottom: 15px;
+    
+}
+
+.inputs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.inputs > input{
+    width: 100%;
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 8px;
+    color: rgba(63, 65, 65, 0.979);
+    font-size: 12pt;
+    outline: none;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.inputs > input::placeholder{
+    color: rgb(163, 162, 162);
+}
+
+.inputs > input:hover{
+    background-color:rgba(234, 240, 240, 0.979);
+}
+
+.inputs > #checkbox{
+    height: 18px;
+    margin-top: 5px;
+}
+
+.inputs > #termos{
+    font-size: 10px;
+}
+
+.inputs > label{
+    color: black;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+.btn-login{
+    width: 80%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    background-color: black;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 800;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.btn-login:hover{
+    background-color: rgb(15, 15, 15);
+}
+
+
+@media only screen and (max-width:960px){
+    .card-login{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .content{
+        flex-direction: column;
+    }
+    .left-login{
+        width: 100%;
+        height: auto;
+        background-color: black;
+    }
+    .left-login >h1{
+        display: none;
+    }
+
+    #left-login-img{
+        width: 50vw;
+    }
+
+    .right-login{
+        width: 100%;
+        height: auto;
+    }
+
+    .card-login{
+        width: 90%;
+        height: 90%;
+    }
+}   
+

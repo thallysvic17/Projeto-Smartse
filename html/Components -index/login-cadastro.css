@@ -19,8 +19,8 @@
     
 }
 
-.cadastro-veiculos > button,
-.usuario > button{
+.cadastro-veiculos > a >button,
+.usuario > a >button{
     background-color: #FFF;
     border-style: none;
     width: 94%;
@@ -32,12 +32,10 @@
     font-size: 35px;
     font-weight: 900;
     transition: 0.1s;
-    
-
 }
 
-.cadastro-veiculos > button:hover,
-.usuario > button:hover{
+.cadastro-veiculos > a > button:hover,
+.usuario > a > button:hover{
     color: rgba(63, 65, 65, 0.979);
     border-color: rgba(63, 65, 65, 0.979);;
 }
