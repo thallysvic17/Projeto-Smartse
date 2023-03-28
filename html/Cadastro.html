@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Componets-Cadastro/header.css">
+    <link rel="stylesheet" href="./Components -index/reset.css">
+    <link rel="stylesheet" href="./Componets-Cadastro/main.css">
+    <link rel="stylesheet" href="./Componets-Cadastro/buttons-table.css">
+    <link rel="stylesheet" href="./Componets-Cadastro/table.css">
+    <link rel="stylesheet" href="./Componets-Cadastro/modal.css">
+    <title>Cadastro de veiculos</title>
+</head>
+<body>
+    <div class="container">
+        <header class="nav-header">
+            <div class="nav-links">
+                <nav class="content">
+                    <h3>Smart se</h3>
+                    <a id="sair" href="./index.html">sair</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <button  class="btn-cadastro1 btn-b"type="button">Cadastrar Veiculo</button>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Ano</th>
+                        <th>Cor</th>
+                        <th>Potencia</th>
+                        <th>Renavam </th>
+                        <th>Placa</th>
+                        <th>Açoes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> hyndai</td>
+                        <td>i30</td>
+                        <td>2010</td>
+                        <td>preto</td>
+                        <td>100cv</td>
+                        <td>16794325812</td>
+                        <td>haz-2c12</td>
+                        <td>
+                            <button type="button" class="btn-cadastro btn-green">Editar</button>
+                            <button type="button" class="btn-cadastro btn-red">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Corolla</td>
+                        <td>toyota</td>
+                        <td>2015</td>
+                        <td>azul</td>
+                        <td>150cv</td>
+                        <td>16794g325812</td>
+                        <td>haz-4c12</td>
+                        <td>
+                            <button type="button" class="btn-cadastro btn-green">Editar</button>
+                            <button type="button"class="btn-cadastro btn-red">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> fiat</td>
+                        <td>argo</td>
+                        <td>2022</td>
+                        <td>branco</td>
+                        <td>80cv</td>
+                        <td>16794d325812</td>
+                        <td>haz-1c12</td>
+                        <td>
+                            <button type="button" class="btn-cadastro btn-green">Editar</button>
+                            <button type="button"class="btn-cadastro btn-red">Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="modal">
+                <div class="modal-content">
+                    <header class="header-modal">
+                        <h2>Novo Cadastro</h2>
+                        <span class="modal-close">X</span>
+                    </header>
+                        <form class="form-modal">
+                            <input type="text" class="modal-form" placeholder="Marca">
+                            <input type="text" class="modal-form" placeholder="Modelo">
+                            <input type="text" class="modal-form" placeholder="Ano">
+                            <input type="text" class="modal-form" placeholder="Cor">
+                            <input type="text" class="modal-form" placeholder="Potencia">
+                            <input type="text" class="modal-form" placeholder="Renavam">
+                            <input type="text" class="modal-form" placeholder="Placa">
+                        </form>
+                        <footer class="footer-modal">
+                            <button class=" btn-cadastro btn-green">Salvar</button>
+                            <button class=" btn-cadastro btn-red">Cancelar</button>
+                        </footer>
+                </div>
+            </div>
+        </main>
+        <footer>
+            footer
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+.content-table{
+    width: 100%;
+    user-select: none;
+    text-align: left;
+    
+}
+
+.content-table th{
+    height: 50px;
+    background-color:  rgba(188, 192, 192, 0.979);
+    padding-left: 20px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.content-table td{
+    height: 80px;
+    padding-left: 20px;
+    font-weight: 400;
+    
+}
+
+.content-table th:last-child{
+width: 15%;
+}
+
+.content-table tr:hover{
+    background-color: #e2f5fa;
+}

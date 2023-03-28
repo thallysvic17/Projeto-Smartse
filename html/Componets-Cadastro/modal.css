@@ -1,0 +1,80 @@
+.modal{
+    background-color: #00000090;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header-modal{
+    position: relative;
+    height: 60px;
+    background-color: black;
+}
+
+.header-modal>h2{
+    color: #FFF;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 12px;
+}
+
+.header-modal > .modal-close{
+    position: absolute;
+    text-align: center;
+    padding-top: 8px;
+    height: 40px;
+    width: 40px;
+    right: 0;
+    top: 10px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 17px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.modal-close:hover{
+    background-color:#29282890;
+}
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 30vw;
+    margin: 15vh auto;
+    padding-bottom: 20px;
+    background-color: #FFF;
+    box-shadow: 1px 1px 10px black;
+}
+
+.form-modal{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 90%;
+    gap: 20px;
+    padding: 0 20px;
+    margin-left: 20px;
+}
+
+.form-modal>input{
+    padding: 18px;
+    outline-style: none;
+    border-style: none;
+    box-shadow: 0 0 2px black;
+    font-size: 1rem;
+}
+
+.form-modal>input:focus{
+    border: 2px solid black;
+    box-shadow: 0 0 2px black;
+}
+
+.footer-modal{
+    background-color:inherit ;
+    text-align: right;
+    padding: 0 20px;
+}

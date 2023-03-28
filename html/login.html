@@ -10,12 +10,14 @@
 </head>
 <body>
     <main class="content">
+<!-- informativo/imagem -->
         <div class="left-login">
             <h1>Faça login <br> e cadastre seu veiculo</h1>
             <img  id="left-login-img"src="./img/login-page-img.svg" alt="taxista">
         </div>
+<!-- Area de login -->
         <div class="right-login">
-            <div class="card-login">
+            <form  id="card-login" class="card-login" name="card-login">
                 <h2>Cadastre seu veiculo</h2>
                 <div class="inputs">
                     <label for="cpf">cpf</label>
@@ -27,12 +29,34 @@
                 </div>
                 <div class="inputs">
                     <label id="termos" for="checkbox">Ao continuar, você concorda em receber chamadas e mensagens SMS ou pelo WhatsApp, inclusive automáticas, da Smartse e de suas afiliadas.</label>
-                    <input  id="checkbox" name="checkbox" type="checkbox">
+                    <input  id="checkbox" name="checkbox" type="checkbox" required>
                 </div>
-                <button  type="submit" class="btn-login">login</button>
-            </div>
+                <button type="submit" class="btn-login">login</button>
+            </form>
         </div>
-            
+<!-- Validaçao jquey --> 
     </main>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="./Js-scripts/jquery.mask.min.js"></script>
+    <script src="./Js-scripts/jquery.validate.min.js"></script>
+    <script src="./Js-scripts/localization/messages_pt_BR.js"></script>
+    <script src="./Js-scripts/additional-methods.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#cpf').mask('000.000.000-00')
+            $('#card-login').validate({
+                rules:{
+                    cpf:{
+                        cpfBR : true,
+                        required: true,
+                    },
+                    password:{
+                        minlength:8,
+                        required: true,
+                    }
+                }
+            })
+        })
+    </script>
 </body>
 </html>

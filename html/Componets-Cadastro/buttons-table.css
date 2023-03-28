@@ -1,0 +1,39 @@
+.btn-cadastro,
+.btn-cadastro1{
+    padding: 16px;
+    border-style: none;
+    border-radius: 20px;
+    background-color: black;
+    color: #FFF;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: box-shadow 0.6s ease;
+}
+
+.btn-cadastro1.btn-b{
+    background-color: #34ace0;
+}
+
+.btn-cadastro1:hover{
+    box-shadow: inset 200px 0 0 #18dcff;
+}
+
+.btn-green{
+    background-color: #13ce66;
+    margin-right: 10px;
+}
+
+.btn-green:hover{
+    box-shadow: inset 200px 0 0 #0fa151;
+}
+
+.btn-red{
+    background-color: #ff4949;
+    margin-left: 10px;
+}
+
+.btn-red:hover{
+    box-shadow: inset 200px 0 0 #f83434;
+}
