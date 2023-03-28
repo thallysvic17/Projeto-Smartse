@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./Componets-Cadastro/buttons-table.css">
     <link rel="stylesheet" href="./Componets-Cadastro/table.css">
     <link rel="stylesheet" href="./Componets-Cadastro/modal.css">
+    <script src="./Js-scripts/page-scripts/table-cadastro.js"></script>
     <title>Cadastro de veiculos</title>
 </head>
 <body>
@@ -23,7 +24,7 @@
             </div>
         </header>
         <main>
-            <button  class="btn-cadastro1 btn-b"type="button">Cadastrar Veiculo</button>
+            <button  class="btn-cadastro1 btn-b" id="cadastrarCliente"type="button">Cadastrar Veiculo</button>
             <table class="content-table">
                 <thead>
                     <tr>
@@ -79,11 +80,11 @@
                     </tr>
                 </tbody>
             </table>
-            <div class="modal">
+            <div class="modal active" id="modal">
                 <div class="modal-content">
                     <header class="header-modal">
                         <h2>Novo Cadastro</h2>
-                        <span class="modal-close">X</span>
+                        <span class="modal-close" id="modalclose">X</span>
                     </header>
                         <form class="form-modal">
                             <input type="text" class="modal-form" placeholder="Marca">
@@ -101,7 +102,7 @@
                 </div>
             </div>
         </main>
-        <footer>
+        <footer id="footer-page">
             footer
         </footer>
     </div>
