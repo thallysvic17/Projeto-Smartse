@@ -1,0 +1,122 @@
+@media (max-width:840px){
+    .container{
+        max-width: 100vw;
+        width: 100%;
+    }
+    .header{
+        position: fixed;
+        width: 100%;
+    }
+
+    main{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        box-shadow: none;
+    }
+    .btn-cadastro1{
+        width: 40%;
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .btn-cadastro.btn-green,
+    .btn-red{
+        padding: 0;
+        height: 60px;
+        width: 60px;
+        font-size: 14px;
+    }
+
+    .content-table> thead{
+        display: none;
+    }
+
+    .content-table tr{
+        box-shadow: 0 1px 3px #00000090;
+    }
+
+    .content-table td:not(:first-child){
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    .contet-table tr:hover{
+        background-color: inherit;
+    }
+
+    .modal-content{
+        margin: 0;
+        width: 100%;
+        
+    }
+}
+
+
+@media (max-width:480px){
+
+    body{
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .container{
+        max-width: 100vw;
+        width: 100%;
+    }
+    .header{
+        position: fixed;
+        width: 100%;
+    }
+
+    main{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        box-shadow: none;
+    }
+    .btn-cadastro1{
+        width: 40%;
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .btn-cadastro.btn-green,
+    .btn-red{
+        padding: 0;
+        height: 60px;
+        width: 80px;
+        font-size: 14px;
+    }
+
+    .content-table> thead{
+        display: none;
+    }
+
+    .content-table tr{
+        box-shadow: 0 1px 3px #00000090;
+    }
+
+    .content-table td:not(:first-child){
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    .contet-table tr:hover{
+        background-color: inherit;
+    }
+
+    .modal-content{
+        margin: 0;
+        width: 100%;
+    }
+
+
+}

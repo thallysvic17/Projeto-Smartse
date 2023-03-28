@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./Componets-Cadastro/buttons-table.css">
     <link rel="stylesheet" href="./Componets-Cadastro/table.css">
     <link rel="stylesheet" href="./Componets-Cadastro/modal.css">
-    <script src="./Js-scripts/page-scripts/table-cadastro.js"></script>
+    <link rel="stylesheet" href="./Componets-Cadastro/Media-Cad.css">
     <title>Cadastro de veiculos</title>
 </head>
 <body>
@@ -80,7 +80,7 @@
                     </tr>
                 </tbody>
             </table>
-            <div class="modal active" id="modal">
+            <div class="modal" id="modal">
                 <div class="modal-content">
                     <header class="header-modal">
                         <h2>Novo Cadastro</h2>
@@ -102,9 +102,21 @@
                 </div>
             </div>
         </main>
-        <footer id="footer-page">
-            footer
-        </footer>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            const openmodal = $('.modal')
+            const cadcliente =$('#cadastrarCliente')
+            const modalClose =$('#modalclose')
+
+                cadcliente.on('click', function(){
+                    $(openmodal).addClass("active")
+            });
+                modalClose.on('click', function(){
+                    $(openmodal).removeClass("active")
+            });
+        });
+    </script>
 </body>
 </html>
