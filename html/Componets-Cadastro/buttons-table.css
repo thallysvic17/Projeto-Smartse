@@ -38,3 +38,14 @@
 .btn-red:hover{
     box-shadow: inset 200px 0 0 #f83434;
 }
+
+td:last-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+#edit, #excluir{
+    display: none;
+}

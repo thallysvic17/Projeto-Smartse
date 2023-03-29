@@ -38,46 +38,9 @@
                         <th>Açoes</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td> hyndai</td>
-                        <td>i30</td>
-                        <td>2010</td>
-                        <td>preto</td>
-                        <td>100cv</td>
-                        <td>16794325812</td>
-                        <td>haz-2c12</td>
-                        <td>
-                            <button type="button" class="btn-cadastro btn-green">Editar</button>
-                            <button type="button" class="btn-cadastro btn-red">Excluir</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td> Corolla</td>
-                        <td>toyota</td>
-                        <td>2015</td>
-                        <td>azul</td>
-                        <td>150cv</td>
-                        <td>16794g325812</td>
-                        <td>haz-4c12</td>
-                        <td>
-                            <button type="button" class="btn-cadastro btn-green">Editar</button>
-                            <button type="button"class="btn-cadastro btn-red">Excluir</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td> fiat</td>
-                        <td>argo</td>
-                        <td>2022</td>
-                        <td>branco</td>
-                        <td>80cv</td>
-                        <td>16794d325812</td>
-                        <td>haz-1c12</td>
-                        <td>
-                            <button type="button" class="btn-cadastro btn-green">Editar</button>
-                            <button type="button"class="btn-cadastro btn-red">Excluir</button>
-                        </td>
-                    </tr>
+                <tbody id="tbody">
+                    <button type="button" class="btn-cadastro btn-green" id="edit">Editar</button>
+                    <button type="button" class="btn-cadastro btn-red" id="excluir">Excluir</button>
                 </tbody>
             </table>
             <div class="modal" id="modal">
@@ -87,23 +50,24 @@
                         <span class="modal-close" id="modalclose">X</span>
                     </header>
                         <form class="form-modal">
-                            <input type="text" class="modal-form" placeholder="Marca">
-                            <input type="text" class="modal-form" placeholder="Modelo">
-                            <input type="text" class="modal-form" placeholder="Ano">
-                            <input type="text" class="modal-form" placeholder="Cor">
-                            <input type="text" class="modal-form" placeholder="Potencia">
-                            <input type="text" class="modal-form" placeholder="Renavam">
-                            <input type="text" class="modal-form" placeholder="Placa">
+                            <input type="text" class="modal-form" id="marca1"    placeholder="Marca">
+                            <input type="text" class="modal-form" id="modelo1"   placeholder="Modelo">
+                            <input type="text" class="modal-form" id="ano1"      placeholder="Ano">
+                            <input type="text" class="modal-form" id="cor1"      placeholder="Cor">
+                            <input type="text" class="modal-form" id="potencia1" placeholder="Potencia">
+                            <input type="text" class="modal-form" id="renavam1"  placeholder="Renavam">
+                            <input type="text" class="modal-form" id="placa1"    placeholder="Placa">
                         </form>
                         <footer class="footer-modal">
-                            <button class=" btn-cadastro btn-green">Salvar</button>
-                            <button class=" btn-cadastro btn-red">Cancelar</button>
+                            <button onclick="produto.salvar()" class=" btn-cadastro btn-green">Salvar</button>
+                            <button onclick="produto.deletar()" class=" btn-cadastro btn-red" >Cancelar</button>
                         </footer>
                 </div>
             </div>
         </main>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="./Js-scripts/cadastro/cadastro.js"></script>
     <script>
         $(document).ready(function(){
             const openmodal = $('.modal')
@@ -116,7 +80,7 @@
                 modalClose.on('click', function(){
                     $(openmodal).removeClass("active")
             });
-        });
+    });
     </script>
 </body>
 </html>
