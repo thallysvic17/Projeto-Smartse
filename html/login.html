@@ -17,21 +17,18 @@
         </div>
 <!-- Area de login -->
         <div class="right-login">
-            <form  id="card-login" class="card-login" name="card-login">
+            <form  id="card-login" class="card-login" action="./Cadastro.html"  method="post" name="card-login">
                 <h2>Cadastre seu veiculo</h2>
                 <div class="inputs">
                     <label for="cpf">cpf</label>
-                    <input id="cpf" name="cpf" type="text" placeholder="000.000.000-00">
+                    <input id="cpf" name="cpf" type="text" placeholder="000.000.000-00" >
                 </div>
                 <div class="inputs">
                     <label for="password">senha</label>
-                    <input  id="password" name="password" type="password" placeholder="Senha">
+                    <input  id="password" name="password" type="password" placeholder="Senha" >
                 </div>
-                <div class="inputs">
-                    <label id="termos" for="checkbox">Ao continuar, você concorda em receber chamadas e mensagens SMS ou pelo WhatsApp, inclusive automáticas, da Smartse e de suas afiliadas.</label>
-                    <input  id="checkbox" name="checkbox" type="checkbox" required>
-                </div>
-                <button type="submit" class="btn-login">login</button>
+                
+                <button type="submit" class="btn-login" id="login">login</button>
             </form>
         </div>
 <!-- Validaçao jquey --> 
@@ -43,20 +40,27 @@
     <script src="./Js-scripts/additional-methods.min.js"></script>
     <script>
         $(document).ready(function(){
-            $('#cpf').mask('000.000.000-00')
-            $('#card-login').validate({
-                rules:{
-                    cpf:{
-                        cpfBR : true,
-                        required: true,
-                    },
-                    password:{
-                        minlength:8,
-                        required: true,
-                    }
+            $('#cpf').mask('000.000.000-00');
+
+            $('#card-login').submit(function(e){
+                e.preventDefault();
+
+                let cpf = $('#cpf').val(); 
+                let password = $('#password').val();
+//validaçao de campos
+                if (cpf ==''){
+                    alert('digite um cpf valido!');
+                    return false;
                 }
-            })
-        })
+                if (password ==''){
+                    alert('digite uma senha valida');
+                    return false;
+                }
+                if (cpf,password = true){
+                    window.location.href = './Cadastro.html';
+                }
+            });
+        });
     </script>
 </body>
 </html>
