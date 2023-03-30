@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Componets-Cadastro/header.css">
-    <link rel="stylesheet" href="./Components -index/reset.css">
-    <link rel="stylesheet" href="./Componets-Cadastro/main.css">
-    <link rel="stylesheet" href="./Componets-Cadastro/buttons-table.css">
-    <link rel="stylesheet" href="./Componets-Cadastro/table.css">
-    <link rel="stylesheet" href="./Componets-Cadastro/modal.css">
-    <link rel="stylesheet" href="./Componets-Cadastro/Media-Cad.css">
+    <link rel="stylesheet" href="./html/Componets-Cadastro/header.css">
+    <link rel="stylesheet" href="./html/Components -index/reset.css">
+    <link rel="stylesheet" href="./html/Componets-Cadastro/main.css">
+    <link rel="stylesheet" href="./html/Componets-Cadastro/buttons-table.css">
+    <link rel="stylesheet" href="./html/Componets-Cadastro/table.css">
+    <link rel="stylesheet" href="./html/Componets-Cadastro/modal.css">
+    <link rel="stylesheet" href="./html/Componets-Cadastro/Media-Cad.css">
     <title>Cadastro de veiculos</title>
 </head>
 <body>
@@ -69,13 +69,14 @@
 
 <!--abrir e fechar modal jquey-->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="./Js-scripts/cadastro/cadastro.js"></script>
+    <script src="./html/Js-scripts/cadastro/cadastro.js"></script>
     <script>
         $(document).ready(function(){
             const openmodal = $('.modal')
             const cadcliente =$('#cadastrarCliente')
             const modalClose =$('#modalclose')
             const btnSalvar =$('#salvar')
+            
 
                 cadcliente.on('click', function(){
                     $(openmodal).addClass("active")
@@ -87,7 +88,6 @@
                     $(openmodal).removeClass("active")
                     alert('salvo com sucesso!')
             });
-                
         });
     </script>
 </body>

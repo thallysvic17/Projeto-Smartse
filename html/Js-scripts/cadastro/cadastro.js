@@ -19,6 +19,7 @@ class Produto {
         this.listaTabela();
         
         this.cancelar();
+
     }
     
     
@@ -52,8 +53,9 @@ class Produto {
             
             //editar veiculo na tabela
             let btnEdit = document.createElement('button');
-            let editText =document.createTextNode('Editar')
+            let editText =document.createTextNode('Editar');           
             btnEdit.setAttribute("onclick","produto.editar("+ JSON.stringify(this.arrayProdutos[i])+")");
+            
             
             //excluir veiculo na tabela
             let btnExcluir = document.createElement('button');
@@ -62,6 +64,7 @@ class Produto {
 
 //add botoes
             btnEdit.classList.add('btn-cadastro','btn-green');
+            btnEdit.id ='btnEdit';
             btnExcluir.classList.add('btn-cadastro', 'btn-red');
             
             td_acoes.appendChild(btnEdit);
@@ -70,7 +73,7 @@ class Produto {
             btnEdit.appendChild(editText);
             btnExcluir.appendChild(excluirText);
             
-            console.log(this.arrayProdutos);
+            
         }
     }
     
