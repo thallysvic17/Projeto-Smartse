@@ -1,4 +1,5 @@
-@media (max-width:840px){
+@media (max-width:930px){
+
     .container{
         max-width: 100vw;
         width: 100%;
@@ -30,18 +31,24 @@
         font-size: 14px;
     }
 
-    .content-table> thead{
-        display: none;
+    .content-table tr> th{
+        padding: 0;
+        text-align: center;
+        
     }
 
     .content-table tr{
         box-shadow: 0 1px 3px #00000090;
     }
 
-    .content-table td:not(:first-child){
-        display: flex;
-        justify-content: space-around;
+    .content-table td{
+        text-align: center;
         padding: 0;
+    }
+
+    .content-table td:last-child{
+        justify-content: center;
+        padding: 5px;
     }
 
     .contet-table tr:hover{
@@ -56,7 +63,7 @@
 }
 
 
-@media (max-width:480px){
+@media (min-width:300px)and (max-width:620px){
 
     body{
         position: relative;
@@ -95,24 +102,48 @@
         font-size: 14px;
     }
 
+    .content-table{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content-table >tbody{
+        display: grid;
+        justify-content: center;
+        height: auto;
+        width: 100%;
+        
+    }
+
+    .content-table td{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        
+    }
     .content-table> thead{
         display: none;
     }
 
     .content-table tr{
         box-shadow: 0 1px 3px #00000090;
+        height: auto;
+        width: 40vh;
     }
 
     .content-table td:not(:first-child){
         display: flex;
         justify-content: space-around;
-        padding: 0;
+        
     }
 
     .contet-table tr:hover{
         background-color: inherit;
     }
-
+    
     .modal-content{
         margin: 0;
         width: 100%;

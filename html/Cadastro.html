@@ -59,13 +59,14 @@
                             <input type="text" class="modal-form" id="placa1"    placeholder="Placa">
                         </form>
                         <footer class="footer-modal">
-                            <button onclick="produto.salvar()" class=" btn-cadastro btn-green">Salvar</button>
-                            <button onclick="produto.deletar()" class=" btn-cadastro btn-red" >Cancelar</button>
+                            <button onclick="produto.salvar()" class=" btn-cadastro btn-green" id="salvar">Salvar</button>
+                            <button onclick="produto.cancelar()" class=" btn-cadastro btn-red" >Cancelar</button>
                         </footer>
                 </div>
             </div>
         </main>
     </div>
+
 <!--abrir e fechar modal jquey-->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="./Js-scripts/cadastro/cadastro.js"></script>
@@ -82,7 +83,12 @@
                 modalClose.on('click', function(){
                     $(openmodal).removeClass("active")
             });
-    });
+                btnSalvar.on('click',function(){
+                    $(openmodal).removeClass("active")
+                    alert('salvo com sucesso!')
+            });
+                
+        });
     </script>
 </body>
 </html>
