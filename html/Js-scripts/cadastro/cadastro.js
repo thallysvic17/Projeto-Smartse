@@ -178,4 +178,5 @@ $(document).ready(function(){
             $(openmodal).removeClass("active")
             alert('Executado com Sucesso!')
     });
+    $('#placa1').mask('AAA - 0000');
 });
