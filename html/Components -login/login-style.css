@@ -1,3 +1,13 @@
+:root{
+    --black1 :black;
+    --black2: #00000090;
+    --black3: #070707;
+    --black4: rgb(53, 54, 54);
+    --black5: rgba(63, 65, 65, 0.979);
+    --black6: rgb(163, 162, 162); 
+    --white1: rgba(234, 240, 240, 0.979);
+    --white2: #fff;
+}
 .content{
     width: 100vw;
     height: 100vh;
@@ -33,7 +43,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    background-color: var(--black1);
 }
 
 .card-login{
@@ -43,14 +53,14 @@
     justify-content: center;
     flex-direction: column;
     padding: 30px 35px;
-    background-color: #fff;
-    border:  1px solid #00000090;;
+    background-color: var(--white2);
+    border:  1px solid var(--black2);
     border-radius: 20px;
-    box-shadow: 0px 10px 20px #00000090;
+    box-shadow: 0px 10px 20px var(--black2);
 }
 
 .card-login > h2{
-    color: #070707;
+    color: var(--black3);
     font-weight: 700;
     font-size: 26px;
     margin: 0;
@@ -69,10 +79,10 @@
 
 .inputs > input{
     width: 100%;
-    border: 1px solid black;
+    border: 1px solid var(--black1);
     padding: 15px;
     border-radius: 8px;
-    color: rgba(63, 65, 65, 0.979);
+    color: var(--black5);
     font-size: 12pt;
     outline: none;
     box-sizing: border-box;
@@ -80,11 +90,11 @@
 }
 
 .inputs > input::placeholder{
-    color: rgb(163, 162, 162);
+    color: var(--black6);
 }
 
 .inputs > input:hover{
-    background-color:rgba(234, 240, 240, 0.979);
+    background-color:var(--white1);
 }
 
 .inputs > #checkbox{
@@ -97,7 +107,7 @@
 }
 
 .inputs > label{
-    color: black;
+    color: var(--black1);
     margin-bottom: 10px;
     font-weight: bold;
     font-size: 16px;
@@ -110,8 +120,8 @@
     margin: 25px;
     border: none;
     border-radius: 8px;
-    background-color: black;
-    color: #fff;
+    background-color: var(--black1);
+    color: var(--white2);
     text-transform: uppercase;
     font-weight: 800;
     cursor: pointer;
@@ -137,7 +147,7 @@
     .left-login{
         width: 100%;
         height: auto;
-        background-color: black;
+        background-color: var(--black1);
     }
     .left-login >h1{
         display: none;

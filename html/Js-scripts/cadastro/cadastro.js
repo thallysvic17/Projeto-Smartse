@@ -128,7 +128,6 @@ class Produto {
 
         return produto;
     }
-
 //funçao limpar forumulario modal
     cancelar(){
     document.getElementById('marca1').value ='';
@@ -142,7 +141,6 @@ class Produto {
     document.getElementById('salvar').innerText ='Salvar';
     this.editId = null;
     }
-
 //funçao deletar veiculo array
     deletar(id){
         if(confirm('Deseja realmente deletar o veiculo de ID' + id)){
@@ -164,12 +162,11 @@ let produto = new Produto();
 //abrir e fechar modal jquey
 
 $(document).ready(function(){
-    const openmodal = $('.modal')
-    const cadcliente =$('#cadastrarCliente')
-    const modalClose =$('#modalclose')
-    const btnSalvar =$('#salvar')
-    const btnEdit =$('#openmodal1')
-    
+        const openmodal = $('.modal')
+        const cadcliente =$('#cadastrarCliente')
+        const modalClose =$('#modalclose')
+        const btnSalvar =$('#salvar')
+        
 
         cadcliente.on('click', function(){
             $(openmodal).addClass("active")
@@ -179,6 +176,6 @@ $(document).ready(function(){
     });
         btnSalvar.on('click',function(){
             $(openmodal).removeClass("active")
-            alert('salvo com sucesso!')
+            alert('Executado com Sucesso!')
     });
 });

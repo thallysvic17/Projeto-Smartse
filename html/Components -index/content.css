@@ -1,3 +1,13 @@
+:root{
+    --textcolor:rgb(53, 54, 54);
+    --texthover:rgba(63, 65, 65, 0.979);
+    --footer : black;
+    --white : #fff;
+    --white2 :#ffff;
+    --CadColor : #e2f5fa;
+
+
+}
 .content{
     display: flex;
     width: 100%;
@@ -21,7 +31,7 @@
 
 .h1-text> h1{
     font-size: 50px;
-    color: rgb(53, 54, 54);
+    color: var(--textcolor);
     font-weight: bold;
 }
 

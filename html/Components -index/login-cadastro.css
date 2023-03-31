@@ -21,7 +21,7 @@
 
 .cadastro-veiculos > a >button,
 .usuario > a >button{
-    background-color: #FFF;
+    background-color: var(--white);
     border-style: none;
     width: 94%;
     height: 80px;
@@ -36,6 +36,6 @@
 
 .cadastro-veiculos > a > button:hover,
 .usuario > a > button:hover{
-    color: rgba(63, 65, 65, 0.979);
-    border-color: rgba(63, 65, 65, 0.979);;
+    color: var(--texthover);
+    border-color: var(--texthover);
 }
