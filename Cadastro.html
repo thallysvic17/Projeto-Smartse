@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./html/Componets-Cadastro/table.css">
     <link rel="stylesheet" href="./html/Componets-Cadastro/modal.css">
     <link rel="stylesheet" href="./html/Componets-Cadastro/Media-Cad.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="./html/Js-scripts/cadastro/cadastro.js"></script>
     <title>Cadastro de veiculos</title>
 </head>
 <body>
@@ -25,6 +27,7 @@
         </header>
         <main>
             <button  class="btn-cadastro1 btn-b" id="cadastrarCliente"type="button">Cadastrar Veiculo</button>
+<!--tabela principal de cadastro-->
             <table class="content-table">
                 <thead>
                     <tr>
@@ -43,6 +46,7 @@
                     
                 </tbody>
             </table>
+<!--Modal add veiculos-->
             <div class="modal" id="modal">
                 <div class="modal-content">
                     <header class="header-modal">
@@ -66,29 +70,5 @@
             </div>
         </main>
     </div>
-
-<!--abrir e fechar modal jquey-->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="./html/Js-scripts/cadastro/cadastro.js"></script>
-    <script>
-        $(document).ready(function(){
-            const openmodal = $('.modal')
-            const cadcliente =$('#cadastrarCliente')
-            const modalClose =$('#modalclose')
-            const btnSalvar =$('#salvar')
-            
-
-                cadcliente.on('click', function(){
-                    $(openmodal).addClass("active")
-            });
-                modalClose.on('click', function(){
-                    $(openmodal).removeClass("active")
-            });
-                btnSalvar.on('click',function(){
-                    $(openmodal).removeClass("active")
-                    alert('salvo com sucesso!')
-            });
-        });
-    </script>
 </body>
 </html>

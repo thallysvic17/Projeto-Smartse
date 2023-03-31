@@ -1,12 +1,13 @@
-
+//produto principal
 class Produto {
 
+//metodo construtor
     constructor() {
         this.id = 1;
         this.arrayProdutos = [];
         this.editId = null;
     }
-    
+//salvar na tabela
     salvar(){
         let produto =this.lerDados();
         
@@ -22,7 +23,7 @@ class Produto {
 
     }
     
-    
+//lista de veiculos tabela
     listaTabela(){
         let tbody = document.getElementById('tbody');
         
@@ -51,20 +52,19 @@ class Produto {
             td_renavan.innerText = this.arrayProdutos[i].renavan1;
             td_placa.innerText = this.arrayProdutos[i].placa1;
             
-            //editar veiculo na tabela
+// botao editar veiculo na tabela
             let btnEdit = document.createElement('button');
             let editText =document.createTextNode('Editar');           
             btnEdit.setAttribute("onclick","produto.editar("+ JSON.stringify(this.arrayProdutos[i])+")");
             
-            
-            //excluir veiculo na tabela
+
+// botao  excluir veiculo na tabela
             let btnExcluir = document.createElement('button');
             let excluirText = document.createTextNode('Excluir')
             btnExcluir.setAttribute("onclick","produto.deletar("+this.arrayProdutos[i].id+")");
 
-//add botoes
+//add  classes nos botoes
             btnEdit.classList.add('btn-cadastro','btn-green');
-            btnEdit.id ='btnEdit';
             btnExcluir.classList.add('btn-cadastro', 'btn-red');
             
             td_acoes.appendChild(btnEdit);
@@ -72,17 +72,17 @@ class Produto {
             
             btnEdit.appendChild(editText);
             btnExcluir.appendChild(excluirText);
-            
-            
         }
     }
     
-    //funcao adicionar veiculo no array
+
+//funcao adicionar veiculo no array
     adicionar(produto){
         this.arrayProdutos.push(produto);
         this.id++;
     }
 
+//atualizar tabela
     atualizar(id,produto){
         for(let i =0; i < this.arrayProdutos.length; i++){
             if(this.arrayProdutos[i].id == id){
@@ -96,7 +96,8 @@ class Produto {
             }
         }
     }
- //funcao editar veiculos
+
+//funcao editar veiculos
     editar(dados){
         this.editId = dados.id;
 
@@ -107,10 +108,10 @@ class Produto {
         document.getElementById('potencia1').value = dados.potencia1;
         document.getElementById('renavam1').value = dados.renavan1;
         document.getElementById('placa1').value = dados.placa1;
-
-        
+//mudando a class do modal
         document.getElementById('salvar').innerText = "Atualizar"
-
+        const openmodal =$('.modal')
+        $(openmodal).addClass("active")
     }
     
     lerDados(){
@@ -155,5 +156,29 @@ class Produto {
             }
         }
     }
+
 }
 let produto = new Produto();
+
+
+//abrir e fechar modal jquey
+
+$(document).ready(function(){
+    const openmodal = $('.modal')
+    const cadcliente =$('#cadastrarCliente')
+    const modalClose =$('#modalclose')
+    const btnSalvar =$('#salvar')
+    const btnEdit =$('#openmodal1')
+    
+
+        cadcliente.on('click', function(){
+            $(openmodal).addClass("active")
+    });
+        modalClose.on('click', function(){
+            $(openmodal).removeClass("active")
+    });
+        btnSalvar.on('click',function(){
+            $(openmodal).removeClass("active")
+            alert('salvo com sucesso!')
+    });
+});
